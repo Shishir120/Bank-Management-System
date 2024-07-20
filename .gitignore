@@ -1,4 +1,5 @@
 .vscode
 accounts.txt
 authentication.txt
-transaction.txt
+transaction_log.txt
+main.exe
