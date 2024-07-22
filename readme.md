@@ -4,9 +4,9 @@ This project implements a simple banking management system in C++ using Object-O
 
 ## Contributors
 
--Shishir Pandeya (062)
--Shekhar Gyawali (061)
--Shraya Ranjit (063)
+-Shishir Pandeya (062) [@Shishir120](https://www.github.com/Shishir120) \
+-Shekhar Gyawali (061) [@SuperShekhar](https://www.github.com/SuperShekhar) \
+-Shraya Ranjit (063) 
 
 ## Features
 
