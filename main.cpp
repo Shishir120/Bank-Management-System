@@ -8,12 +8,21 @@
 #include<sstream>
 using namespace std;
 
+
+#ifdef _WIN32
+#define CLEAR_SCREEN() system("cls") // For Windows
+#else
+#define CLEAR_SCREEN() system("clear") // For Linux/Unix
+#endif
+
+
 void pressAnyKeyToContinue()
 {
     cout << "\n";
     cout << "Press Enter to continue..." << endl;
     cin.ignore(); // Ignore any previous input in the buffer
     cin.get();    // Wait for a key press
+    CLEAR_SCREEN();
 }
 
 
@@ -417,7 +426,7 @@ int main()
 
     cout << "--------------------------------Welcome to Banking Management System------------------------------------" << "\n\n";
     while (true)
-    {
+    {   CLEAR_SCREEN();
         cout << "1. Create your account. " << endl;
         cout << "2. Login to your account. " << endl;
         cout << "0. To exit." << endl;
@@ -433,20 +442,24 @@ int main()
         {
 
             case 0:
+                 CLEAR_SCREEN();
                 cout << '\n';
                 cout << "Thank you for choosing us!!" << endl;
                 exit(0);
                 break;
 
             case 1:
+                CLEAR_SCREEN();
                 account_number = b1.create_account();
                 cout << "\n";
                 cout << "Your account number is: " << account_number << endl;
                 cout << "Keep it safe for accessing banking features!" << endl << endl;
                 cout << "Login to deposit money." << endl;
+                pressAnyKeyToContinue();
                 break;
             
             case 2:
+                CLEAR_SCREEN();
                 cout << "Enter account number: ";
                 cin >> account_number;
                 if(b1.login(account_number))
@@ -469,32 +482,38 @@ int main()
                     {
 
                         case 0:
+                            CLEAR_SCREEN();
                             cout << "Successfully Logged out!" << endl << endl;
                             logged_in = false;
                             pressAnyKeyToContinue();
                             break;
                         
                         case 1:
+                            CLEAR_SCREEN();
                             b1.deposit(account_number);
                             pressAnyKeyToContinue();
                             break;
 
                         case 2:
+                             CLEAR_SCREEN();
                             b1.withdraw(account_number);
                             pressAnyKeyToContinue();
                             break;
 
                         case 3:
+                             CLEAR_SCREEN();
                             b1.checkBalance(account_number);
                             pressAnyKeyToContinue();
                             break;
 
                         case 4:
+                             CLEAR_SCREEN();
                             b1.view_transactionDetails(account_number);
                             pressAnyKeyToContinue();
                             break;
 
                         default:
+                            
                             cout << "Invalid Input! " << endl;
                             break;
                         }
