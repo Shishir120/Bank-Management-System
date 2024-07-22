@@ -2,6 +2,12 @@
 
 This project implements a simple banking management system in C++ using Object-Oriented Programming (OOP) concepts. It allows users to create accounts, log in, deposit money, withdraw money, check their balance, and view transaction details.
 
+## Contributors
+
+-Shishir Pandeya (062)
+-Shekhar Gyawali (061)
+-Shraya Ranjit (063)
+
 ## Features
 
 - **Create Account**: Allows a user to create a new account with a unique account number and a 4-digit PIN.
